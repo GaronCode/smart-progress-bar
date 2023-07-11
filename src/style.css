@@ -1,0 +1,225 @@
+.dev-progress
+{
+    z-index: 999999;
+    position:fixed;
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+    top: 0;
+    left: 0;
+}
+.dev-progress .dev-progress__card
+{
+    padding-top: 20px;
+    position:relative;
+    width:250px;
+    background:#003a72;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+    text-align:center;
+    overflow:hidden;
+    transition: all 0.5s ease-out;
+}
+.dev-progress .dev-progress__card:hover
+{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.dev-progress .dev-progress__card-progress-color
+{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-50%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.03);
+    pointer-events:none;
+    z-index:1;
+    transition: left .3s;
+}
+
+
+
+.dev-progress .dev-progress__container {
+    width: inherit;
+}
+
+
+.dev-progress  .dev-progress__percent
+{
+    position:relative;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    box-shadow: inset 0 0 50px #000;
+    background:#6fbcf0;
+    z-index:999;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+.dev-progress  .dev-progress__percent  .dev-progress__percent-num
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+}
+.dev-progress  .dev-progress__percent  .dev-progress__percent-num .dev-progress__percent-a
+{
+    color:#ececec;
+    font-weight:700;
+    font-size:40px;
+    transition:0.5s;
+    user-select: none;
+    cursor: inherit;
+}
+.dev-progress .dev-progress__card:hover  .dev-progress__percent  .dev-progress__percent-num .dev-progress__percent-a
+{
+    color:#fff;
+    font-size:60px;
+}
+.dev-progress  .dev-progress__percent  .dev-progress__percent-num span
+{
+    color:#ececec;
+    font-size:24px;
+    transition:0.5s;
+}
+.dev-progress .dev-progress__card:hover  .dev-progress__percent  .dev-progress__percent-num .dev-progress__percent-a span
+{
+    color:#fff;
+}
+.dev-progress .dev-progress__card-text
+{
+    position:relative;
+    color:#ececec;
+    margin-top:20px;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:0.5s;
+    overflow: hidden;
+}
+.dev-progress .dev-progress__card:hover .dev-progress__card-text
+{
+    color:#fff;
+}
+.dev-progress svg
+{
+    position:relative;
+    width:150px;
+    height:150px;
+    z-index:1000;
+}
+.dev-progress svg circle
+{
+    width:100%;
+    height:100%;
+    fill:none;
+    stroke:#82c6f3;
+    stroke-width:10;
+    stroke-linecap:round;
+    transform:translate(5px,5px);
+}
+.dev-progress svg circle:nth-child(2)
+{
+    stroke-dasharray:440;
+    stroke-dashoffset:440;
+}
+.dev-progress .dev-progress__card:nth-child(1) svg circle:nth-child(2)
+{
+    stroke-dashoffset:calc(440 - (440 * 90) / 100);
+    stroke:#c2c2c2;
+}
+
+
+.dev-progress-small {
+    top: 20px;
+    width: 220px;
+    height: 300px;
+}
+
+.dev-progress-small .dev-progress__card {
+    
+    width: 200px;
+    min-height: 200px;
+}
+
+.dev-progress-small .dev-progress__card-text {
+    font-size: xx-small;
+}
+
+.dev-progress-done .dev-progress__percent {
+    background: #6da462 !important;
+}
+
+.dev-progress-done .dev-progress__card {
+    background: #1a601e !important;
+}
+
+.dev-progress-hide .dev-progress__card
+{
+    transform:translateY(100px);
+    opacity: 0;
+}
+
+.dev-progress-before .dev-progress__card
+{
+    transform:translateY(100px);
+    opacity: 0;
+}
+
+
+
+.dev-progress ul {
+    color: #c2c2c2;
+    padding: 10px;
+    font-size: smaller;
+    list-style-type: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.dev-progress li {
+    display: flex;
+    text-transform: none;
+    gap: 5px;
+    transition: all .3s;
+    margin-bottom: 5px;
+}
+
+.dev-progress li.dev-progress-li-hidden {
+    font-size: 0;
+    opacity: .5;
+    padding: 0;
+    margin: 0;
+}
+
+.dev-progress li.dev-progress-li-active {
+    color: white;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+.dev-progress li:hover {
+    text-shadow: 0px 3px 4px rgb(0, 0, 0, .5);
+}
+
+
+.dev-progress li span:first-child {
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: left;
+}

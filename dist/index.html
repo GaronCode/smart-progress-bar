@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>smartprogressbar</title>
+    </head>
+    <body>
+        <script type="module">
+
+
+
+
+
+            import { SmartProgressBar } from "./smartprogressbar.esm.js";
+
+            const a = new SmartProgressBar({ minimize: false });
+
+            let pProgress = 15;
+            let p = a.addProgress({
+                name: "alfaWolf.mp4",
+                progress: pProgress,
+            });
+
+            const pInc = () => {
+                pProgress += randomIntFromInterval(2, 12);
+
+                if (pProgress >= 100) {
+                    p.progress = 100;
+                    setTimeout(() => a.removeProgress(p), 2000);
+                } else {
+                    p.progress = pProgress;
+                    setTimeout(pInc, randomIntFromInterval(1000, 5000));
+                }
+            };
+            pInc();
+
+            let s = a.addProgress({
+                name: "mega_city_shrtge4t65rgh632ds3df46gf.mp4",
+                progress: 47,
+            });
+            let g = a.addProgress({
+                name: "111.mp4",
+                progress: 56,
+            });
+
+            setTimeout(() => {
+                s.progress = 58;
+            }, 3890);
+            setTimeout(() => {
+                s.progress = 87;
+            }, 5000);
+
+            setTimeout(() => {
+                g.progress = 100;
+            }, 5000);
+
+            setTimeout(() => {
+                a.removeProgress(g);
+            }, 7000);
+
+            setTimeout(() => {
+                a.addProgress({
+                    name: "kpks92u3nitpt813zle2s0pdoey9zv08.mp4",
+                    progress: 15,
+                });
+            }, 2483);
+
+            function randomIntFromInterval(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+        </script>
+    </body>
+</html>
