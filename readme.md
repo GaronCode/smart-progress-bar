@@ -1,6 +1,7 @@
 # Smart Progress Bar
 Easly create the pop-up bar with several progress elements in one window
-
+![alt-текст](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/docs/img/preview.png?raw=true "Текст заголовка логотипа 1")
+***
 ## Usage
 1. Include Bar.
     If you want use as:
