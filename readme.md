@@ -1,29 +1,40 @@
 # Smart Progress Bar
 Easly create the pop-up bar with several progress elements in one window
 
+### [Live Template](https://garoncode.github.io/smart-progress-bar/liveTemplate/)
+![alt-текст](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/docs/img/preview.png?raw=true "Live template preview")
+### [Full Documentation](https://garoncode.github.io/smart-progress-bar/)
 
-![alt-текст](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/docs/img/preview.png?raw=true "Текст заголовка логотипа 1")
 ***
 ## Usage
 1. Include Bar.
     If you want use as:
-   -  a module
+   - ***NPM***
+    add to project
+    ```batch
+    npm install smart-progress-bar
+    ```
+    and import it
+    ```js
+    import { SmartProgressBar } from "smart-progress-bar";
+    ```
+   -  ***MODULE***
+   copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.esm.js) to your project
     ```html
     <script type="module">
     import { SmartProgressBar } from "./smartprogressbar.esm.js";
-    const Settings = { ... }
-    const ProgressBar = new SmartProgressBar( Settings );
+    ...
     </script>
     ```
-    - iife-style (you need use global object `SPB`)
+    - ***iife-style*** (you need use global object `SPB`)
+    copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.iife.js) to your project
     ```html
     <script src="smartprogressbar.iife.js"></script>
     <script>
-    const Settings = { ... }
-    const ProgressBar = new SPB.SmartProgressBar( Settings );
+        ...
     </script>
     ```
-2. Setting up the bar if needed (object **Settings**)
+2. Setting up the bar if needed
    (default settings)
     ```js
     const Settings = {
