@@ -1,4 +1,6 @@
 # Smart Progress Bar
+Easly create the pop-up bar with several progress elements in one window
+
 ## Usage
 1. Include Bar.
     If you want use as:

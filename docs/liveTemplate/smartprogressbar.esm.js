@@ -178,11 +178,6 @@ function startTransition(el, classAdded) {
 }
 
 /**
- * @typedef {SmartProgressBar}
- */
-
-/**
- * @class
  * Create instance for main progressbar
  */
 var _animationData = /*#__PURE__*/new WeakMap();
@@ -246,13 +241,7 @@ var SmartProgressElement = /*#__PURE__*/function () {
     get: function get() {
       return this._progress;
     },
-    set:
-    /**
-     * Setter and getter for progress
-     * @type {number}
-     * @param {number}
-     */
-    function set(n) {
+    set: function set(n) {
       _classPrivateMethodGet(this, _setProgress, _setProgress2).call(this, n);
       if (n === 100) {
         this.ondone();
@@ -296,7 +285,7 @@ var SmartProgressElement = /*#__PURE__*/function () {
     }
     /**
      * Start show animation with callback
-     * @param {function} afterAnimationDone - callback
+     * @param {function} afterAnimationDone 
      */
   }, {
     key: "show",
@@ -374,18 +363,14 @@ var css = ".dev-progress\n{\n    z-index: 999999;\n    position:fixed;\n    disp
 n(css,{});
 
 /**
- * @typedef {SmartProgressElement}
- */
-
-/**
- * @class
- * create the pop-up bar with several progress elements
+ * SmartProgressBar - create the pop-up bar with several progress elements
  */
 var _whereHtml = /*#__PURE__*/new WeakMap();
 var _settings = /*#__PURE__*/new WeakMap();
 var _createStyle = /*#__PURE__*/new WeakSet();
 var _createHtml = /*#__PURE__*/new WeakSet();
 var _createEvents = /*#__PURE__*/new WeakSet();
+var _setValue = /*#__PURE__*/new WeakSet();
 var _mount = /*#__PURE__*/new WeakSet();
 var _unmount = /*#__PURE__*/new WeakSet();
 var SmartProgressBar = /*#__PURE__*/function () {
@@ -412,6 +397,7 @@ var SmartProgressBar = /*#__PURE__*/function () {
     _classCallCheck(this, SmartProgressBar);
     _classPrivateMethodInitSpec(this, _unmount);
     _classPrivateMethodInitSpec(this, _mount);
+    _classPrivateMethodInitSpec(this, _setValue);
     _classPrivateMethodInitSpec(this, _createEvents);
     _classPrivateMethodInitSpec(this, _createHtml);
     _classPrivateMethodInitSpec(this, _createStyle);
@@ -431,7 +417,6 @@ var SmartProgressBar = /*#__PURE__*/function () {
         }
       }
     });
-    _defineProperty(this, "_progress", 0);
     _classPrivateFieldSet(this, _whereHtml, document.querySelector(whereSelector));
     _classPrivateFieldGet(this, _settings).texts.headerText = headerText;
     _classPrivateFieldGet(this, _settings).changeSizeOnClick = changeSizeOnClick;
@@ -487,10 +472,6 @@ var SmartProgressBar = /*#__PURE__*/function () {
         _this2.progressContainer.removeChild(progress.HtmlContainer);
       });
     }
-
-    /**
-     * Minimize or return to normal size main window
-     */
   }, {
     key: "minimize",
     value: function minimize() {
@@ -502,22 +483,15 @@ var SmartProgressBar = /*#__PURE__*/function () {
         _classPrivateFieldGet(this, _settings).mini = true;
       }
     }
+    /**
+     * settter for main progress
+     */
   }, {
     key: "progress",
-    get: function get() {
-      return this._progress;
-    },
-    set:
-    /**
-     * Setter and getter for main progress
-     * @type {number}
-     * @param {number}
-     */
-    function set(data) {
+    set: function set(data) {
       if (data === 100) this.main.classList.add(_classPrivateFieldGet(this, _settings).classes.mainDone);else this.main.classList.remove(_classPrivateFieldGet(this, _settings).classes.mainDone);
-      this._progress = data;
+      _classPrivateMethodGet(this, _setValue, _setValue2).call(this, data);
       this.progressLine.style.left = parseInt(-100 + data) + "%";
-      this.progressHtml.innerText = data;
     }
   }, {
     key: "tryChangeProgress",
@@ -624,6 +598,9 @@ function _createEvents2() {
     return _this5.minimize();
   });
 }
+function _setValue2(val) {
+  this.progressHtml.innerText = val;
+}
 function _mount2() {
   document.head.appendChild(this.style);
   _classPrivateFieldGet(this, _whereHtml).appendChild(this.main);
@@ -631,9 +608,6 @@ function _mount2() {
 function _unmount2() {
   document.head.removeChild(this.style);
   _classPrivateFieldGet(this, _whereHtml).removeChild(this.main);
-}
-if (typeof module !== 'undefined') {
-  module.exports = SmartProgressBar;
 }
 
 export { SmartProgressBar };

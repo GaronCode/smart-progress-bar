@@ -2,12 +2,13 @@
   "name": "smart-progress-bar",
   "version": "1.0.0",
   "description": "Shows pop-up progress bar with multi-tasks",
-  "main": "dist/smartprogressbar.cjs.js",
+  "main": "dist/smartprogressbar.esm.js",
   "module": "dist/smartprogressbar.esm.js",
   "browser": "dist/smartprogressbar.umd.js",
   "iife": "dist/smartprogressbar.iife.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "push": "git push -f gh master"
   },
   "keywords": [
     "progressbar",
@@ -16,7 +17,9 @@
     "standalone",
     "easy",
     "import",
-    "pop-up"
+    "pop-up",
+    "modern",
+    "style"
   ],
   "author": "GaronCode",
   "license": "ISC",
