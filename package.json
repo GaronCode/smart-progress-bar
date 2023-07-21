@@ -1,11 +1,11 @@
 {
   "name": "smart-progress-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shows pop-up progress bar with multi-tasks",
-  "main": "dist/smartprogressbar.esm.js",
+  "main": "dist/smartprogressbar.esm.min.js",
   "module": "dist/smartprogressbar.esm.js",
-  "browser": "dist/smartprogressbar.umd.js",
   "iife": "dist/smartprogressbar.iife.js",
+  "iifeMin": "dist/smartprogressbar.iife.min.js",
   "scripts": {
     "build": "rollup -c",
     "push": "git push -f gh master"
@@ -26,6 +26,8 @@
   "devDependencies": {
     "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.22.7",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-terser": "^0.4.3",
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
