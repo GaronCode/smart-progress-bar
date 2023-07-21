@@ -19,7 +19,7 @@ Easly create the pop-up bar with several progress elements in one window
     import { SmartProgressBar } from "smart-progress-bar";
     ```
    -  ***MODULE***
-   copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.esm.js) to your project
+   copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.esm.js)  (or [minify version](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.esm.mini.js)) to your project
     ```html
     <script type="module">
     import { SmartProgressBar } from "./smartprogressbar.esm.js";
@@ -27,7 +27,7 @@ Easly create the pop-up bar with several progress elements in one window
     </script>
     ```
     - ***iife-style*** (you need use global object `SPB`)
-    copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.iife.js) to your project
+    copy file from [this](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.iife.js)  (or [minify version](https://github.com/GaronCode/smart-progress-bar/blob/217bc7d59539d806ed4933deac4648d3037a73ae/dist/smartprogressbar.iife.mini.js)) to your project
     ```html
     <script src="smartprogressbar.iife.js"></script>
     <script>
