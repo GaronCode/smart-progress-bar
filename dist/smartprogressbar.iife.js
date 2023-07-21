@@ -635,9 +635,6 @@ var SPB = (function (exports) {
     document.head.removeChild(this.style);
     _classPrivateFieldGet(this, _whereHtml).removeChild(this.main);
   }
-  if (typeof module !== 'undefined') {
-    module.exports = SmartProgressBar;
-  }
 
   exports.SmartProgressBar = SmartProgressBar;
 
