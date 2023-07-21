@@ -2,7 +2,6 @@ import { ClassList } from "./classList.js";
 import { accFunction } from "./accFunction.js";
 import { createProgressHtml } from "./createProgressHtml.js";
 import { startTransition } from "./startTransition.js";
-import { SmartProgressBar } from "./index.js";
 
 /**
  * @typedef {SmartProgressBar}

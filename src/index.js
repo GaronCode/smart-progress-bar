@@ -242,7 +242,3 @@ export class SmartProgressBar {
         this.#whereHtml.removeChild(this.main);
     }
 }
-
-if (typeof module !== 'undefined') {
-    module.exports = SmartProgressBar;
-}
