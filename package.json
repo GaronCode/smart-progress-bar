@@ -1,6 +1,6 @@
 {
   "name": "smart-progress-bar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shows pop-up progress bar with multi-tasks",
   "main": "dist/smartprogressbar.esm.min.js",
   "module": "dist/smartprogressbar.esm.js",
