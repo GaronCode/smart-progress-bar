@@ -44,6 +44,9 @@ export default [
         output: [{ file: pkg.module, format: "es" }],
         plugins: [
             styles(),
+            babel({
+                exclude: ["node_modules/**"],
+            }),
         ],
     },
     {
